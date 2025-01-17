@@ -4,100 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom Styles -->
     <style>
-        .hero-section {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .about-section {
-            background-color: #e9ecef;
-            padding: 50px 0;
-        }
-
-        .portfolio-section {
-            padding: 50px 0;
-        }
-
-        .contact-section {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-        }
-
-        .card {
-            border: none;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
+        /* Custom Styles can be added here if needed */
     </style>
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="display-4">Welcome to My Portfolio</h1>
-            <p class="lead">I'm a passionate web developer creating innovative web experiences.</p>
-            <a href="#portfolio" class="btn btn-primary btn-lg">Check out my work</a>
+    <section class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4">Welcome to My Portfolio</h1>
+            <p class="text-xl mb-8">I create amazing web experiences with modern technologies.</p>
+            <a href="#portfolio" class="bg-white text-blue-600 px-6 py-3 text-lg rounded-full hover:bg-gray-200 transition duration-300">Explore My Work</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About Me</h2>
-                    <p>I'm a web developer with a strong focus on front-end development. I enjoy building responsive, user-friendly websites and applications. My skill set includes HTML, CSS, JavaScript, and PHP.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://via.placeholder.com/400" alt="My Image" class="img-fluid rounded-circle">
-                </div>
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                <h2 class="text-4xl font-semibold text-blue-600 mb-4">About Me</h2>
+                <p class="text-lg text-gray-700">I am a passionate web developer with a focus on creating responsive, user-friendly websites. I have expertise in HTML, CSS, JavaScript, and PHP. I am always learning and improving my skills to deliver the best results for my clients.</p>
+            </div>
+            <div class="md:w-1/2 text-center">
+                <img src="https://via.placeholder.com/400" alt="My Image" class="rounded-full w-64 h-64 object-cover mx-auto shadow-lg">
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="container">
-            <h2 class="text-center mb-5">My Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">A web application built using Laravel to manage tasks.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
-                        </div>
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold text-blue-600 mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/400x300" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project 1</h3>
+                        <p class="text-gray-600 mb-4">A web application built with Laravel to manage tasks and projects.</p>
+                        <a href="#" class="text-blue-600 hover:underline">View Project</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">A portfolio website built with HTML, CSS, and JavaScript.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
-                        </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/400x300" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project 2</h3>
+                        <p class="text-gray-600 mb-4">A portfolio website built with HTML, CSS, and JavaScript to showcase personal work.</p>
+                        <a href="#" class="text-blue-600 hover:underline">View Project</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">An e-commerce website built with Shopify for a local store.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
-                        </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/400x300" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project 3</h3>
+                        <p class="text-gray-600 mb-4">An e-commerce website built with Shopify, providing a seamless shopping experience.</p>
+                        <a href="#" class="text-blue-600 hover:underline">View Project</a>
                     </div>
                 </div>
             </div>
@@ -105,32 +69,28 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Contact Me</h2>
-            <form>
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    </div>
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold text-blue-600 mb-12">Contact Me</h2>
+            <form class="max-w-lg mx-auto bg-gray-100 p-8 rounded-lg shadow-lg">
+                <div class="mb-6">
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-4 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600" required>
                 </div>
-                <div class="mb-3">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                <div class="mb-6">
+                    <input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-4 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                <div class="mb-6">
+                    <textarea id="message" name="message" placeholder="Your Message" class="w-full p-4 bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
             </form>
         </div>
     </section>
 
-    <!-- Bootstrap JS (Optional) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-6 text-center">
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
